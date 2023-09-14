@@ -52,7 +52,7 @@ reposta_formulario = requests.get('http://localhost:5000/cadastro/formulario')
 print(reposta_formulario.json())
 ```
 *Resposta Esperada:*
-```json
+```
 {'email': 'Seu email',
  'nome': 'Seu nome',
  'senha': 'Sua senha'}
@@ -69,7 +69,7 @@ resposta_cadastro = requests.post('http://localhost:5000/cadastro',json=formular
 print(resposta_cadastro.json()) 
 ```
 *Resposta Esperada:*
-```json
+```
 {'mensagem': 'Cadastro realizado com sucesso!'}
 ```
 
@@ -81,7 +81,7 @@ resposta_login = requests.get('http://localhost:5000/login',auth=('davi','davi12
 print(resposta_login.json())
 ```
 *Resposta Esperada:*
-```json
+```
 {'x-api-key':'47ec8bad-27ef-4b2b-89ea-34eb8dbd4087'}
 ```
 
@@ -93,13 +93,13 @@ resposta_tempo = requests.get('http://localhost:5000/tempo',headers={'x-api-key'
 print(resposta_tempo.json())
 ```
 *Resposta Esperada:*
-```json
+```
 {'cidade': 'Florianópolis',
-    'codicao meteorologica': ' Muitas nuvens com chuva isolada ',
-    'data': ' 13/09/2023 - Quarta',
-    'temperatura': '22°C', 
-    'umidade': '75%', 
-    'vento': 'Fracos'}
+ 'codicao meteorologica': ' Muitas nuvens com chuva isolada ',
+ 'data': ' 13/09/2023 - Quarta',
+ 'temperatura': '22°C', 
+ 'umidade': '75%', 
+ 'vento': 'Fracos'}
 ```
 
 ### Previsão do tempo para cidade específica:
@@ -110,13 +110,13 @@ resposta_cidade = requests.get('http://localhost:5000/tempo/cidade/São Paulo',h
 print(resposta_cidade.json())
 ```
 *Resposta Esperada:*
-``` json
+```
 {'cidade': 'São Paulo', 
-    'codicao meteorologica': ' Poucas nuvens ', 
-    'data': ' 13/09/2023 - Quarta',
-    'temperatura': '26°C', 
-    'umidade': '42%', 
-    'vento': 'Moderados com rajadas'}
+ 'codicao meteorologica': ' Poucas nuvens ', 
+ 'data': ' 13/09/2023 - Quarta',
+ 'temperatura': '26°C', 
+ 'umidade': '42%', 
+ 'vento': 'Moderados com rajadas'}
 ```
 
 ### Previsão do tempo para cidade específica ao longo da semana:
@@ -127,40 +127,40 @@ resposta_cidade_semana = requests.get('http://localhost:5000/tempo/cidade/São P
 print(resposta_cidade_semana.json())
 ```
 *Resposta Esperada:*
-``` Json
+```
 [{'cidade': 'São Paulo', 
-    'codicao meteorologica': ' Poucas nuvens ', 
-    'data': ' 13/09/2023 - Quarta', 
-    'temperatura': '26°C', 
-    'umidade': '42 % ', 
-    'vento': 'Moderados com rajadas'},
+ 'codicao meteorologica': ' Poucas nuvens ', 
+ 'data': ' 13/09/2023 - Quarta', 
+ 'temperatura': '26°C', 
+ 'umidade': '42 % ', 
+ 'vento': 'Moderados com rajadas'},
 
-    {'cidade': 'São Paulo', 
-    'codicao meteorologica': ' Muitas nuvens com pancadas de chuva e trovoadas isoladas ', 
-    'data': ' 14/09/2023 - Quinta', 
-    'temperatura': '18°C', 
-    'umidade':'62%', 
-    'vento': 'Moderados com rajadas'}, 
+ {'cidade': 'São Paulo', 
+ 'codicao meteorologica': ' Muitas nuvens com pancadas de chuva e trovoadas isoladas ', 
+ 'data': ' 14/09/2023 - Quinta', 
+ 'temperatura': '18°C', 
+ 'umidade':'62%', 
+ 'vento': 'Moderados com rajadas'}, 
 
-    {'cidade': 'São Paulo', 
-    'codicao meteorologica': ' Muitas nuvens com chuva isolada ', 
-    'data': ' 15/09/2023 - Sexta', 
-    'temperatura': '15°C', 
-    'umidade': '70%', 
-    'vento': 'Moderados'}, 
+ {'cidade': 'São Paulo', 
+ 'codicao meteorologica': ' Muitas nuvens com chuva isolada ', 
+ 'data': ' 15/09/2023 - Sexta', 
+ 'temperatura': '15°C', 
+ 'umidade': '70%', 
+ 'vento': 'Moderados'}, 
 
-    {'cidade': 'São Paulo', 
-    'codicao meteorologica': ' Muitas nuvens com nevoeiro ', 
-    'data': ' 16/09/2023 - Sábado', 
-    'temperatura': '20°C', 
-    'umidade': '67%', 
-    'vento': 'Fraco/Moderado'}, 
+ {'cidade': 'São Paulo', 
+ 'codicao meteorologica': ' Muitas nuvens com nevoeiro ', 
+ 'data': ' 16/09/2023 - Sábado', 
+ 'temperatura': '20°C', 
+ 'umidade': '67%', 
+ 'vento': 'Fraco/Moderado'}, 
 
-    {'cidade': 'São Paulo', 
-    'codicao meteorologica': ' Poucas nuvens ', 
-    'data': ' 17/09/2023 - Domingo', 
-    'temperatura': '24°C', 
-    'umidade': '60%', 
-    'vento': 'Fraco/Moderado'}]
+ {'cidade': 'São Paulo', 
+ 'codicao meteorologica': ' Poucas nuvens ', 
+ 'data': ' 17/09/2023 - Domingo', 
+ 'temperatura': '24°C', 
+ 'umidade': '60%', 
+ 'vento': 'Fraco/Moderado'}]
 ```
 ___

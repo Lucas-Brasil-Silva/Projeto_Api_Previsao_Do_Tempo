@@ -127,7 +127,7 @@ resposta_cidade_semana = requests.get('http://localhost:5000/tempo/cidade/São P
 print(resposta_cidade_semana.json())
 ```
 *Resposta Esperada:*
-``` Json
+```
 [{'cidade': 'São Paulo', 
     'codicao meteorologica': ' Poucas nuvens ', 
     'data': ' 13/09/2023 - Quarta', 
@@ -163,4 +163,4 @@ print(resposta_cidade_semana.json())
     'umidade': '60%', 
     'vento': 'Fraco/Moderado'}]
 ```
-___
+____

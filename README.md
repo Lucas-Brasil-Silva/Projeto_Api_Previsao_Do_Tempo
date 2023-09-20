@@ -9,10 +9,7 @@
 
 ## 🛠️ Tecnologias Utilizadas
 Principais tecnologias usadas:
-[Flask](https://readthedocs.org/projects/flask/) - [Flask-Limiter](https://readthedocs.org/projects/flask/) -
-[SQLAlchemy](https://readthedocs.org/projects/flask/) - [Pymongo](https://readthedocs.org/projects/flask/) - 
- [Selenuim](https://readthedocs.org/projects/flask/) -
-[Scrapy](https://readthedocs.org/projects/flask/) entre outras.
+Flask - Flask-Limiter - SQLAlchemy - Pymongo - Selenuim - Scrapy entre outras.
 
 ## 📌 Status do Projeto
 <h4 align="center"> 

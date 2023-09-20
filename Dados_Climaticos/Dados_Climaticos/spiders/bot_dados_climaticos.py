@@ -62,10 +62,6 @@ class DadosClimaticosSpider(scrapy.Spider):
 
     """
     name = 'botdadosclimaticos'
-    link = ['https://previsao.inmet.gov.br/3550308',
-    'https://previsao.inmet.gov.br/4205407',
-    'https://previsao.inmet.gov.br/4106902',
-    'https://previsao.inmet.gov.br/3304557']
 
     def urls(self,file='codigo_IBGE.txt'):
         """
